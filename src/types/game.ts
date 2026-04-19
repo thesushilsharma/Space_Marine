@@ -9,7 +9,8 @@ export interface Entity {
   rot: number;
   av: number;
   r: number;
-  gfx?: PIXI.Graphics;
+  gfx?: PIXI.Container;
+  maxLife?: number;
   [key: string]: any;
 }
 
@@ -52,4 +53,14 @@ export interface Boss extends Entity {
 export interface Powerup extends Entity {
   pu: typeof PU_TYPES[number];
   life: number;
+}
+
+export interface Particle extends Entity {
+  life: number;
+  maxLife: number;
+}
+
+export interface Debris extends Entity {
+  life: number;
+  maxLife: number;
 }
