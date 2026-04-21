@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build:wasm": "node build-wasm.js",
+    "prebuild": "node build-wasm.js",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -30,6 +32,7 @@
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wabt": "^1.0.39"
   }
 }
